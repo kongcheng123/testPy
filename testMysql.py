@@ -1,7 +1,6 @@
 from datetime import date, datetime, timedelta
 import pymysql.cursors
 
-
 #连接数据库
 # 连接配置信息
 config = {
