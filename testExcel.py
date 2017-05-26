@@ -1,7 +1,7 @@
 import xlrd
 import re
 
-wb = xlrd.open_workbook('22.xls')  # 打开文件
+wb = xlrd.open_workbook('12.xlsx')  # 打开文件
 
 #sh = wb.sheet_by_name('考试成绩')
 
@@ -14,9 +14,9 @@ sh = wb.sheet_by_index(0)  # 第一个表
 #sh = wb.sheet_by_name(u'Sheet1')
 
 # 单元格的值
-cellA1 = sh.cell(0, 0)
-cellA1Value = cellA1.value
+#cellA1 = sh.cell(0, 0)
+#cellA1Value = cellA1.value
 
 # 第一列的值
-columnValueList = sh.col_values(2)
+columnValueList = sh.col_values(1)
 print(columnValueList)

@@ -64,7 +64,7 @@ def getOnepage(url):
 
 #html = requests.get('https://issues.apache.org/jira/browse/YARN-6627?jql=project%20in%20(YARN%2C%20HDFS%2C%20HADOOP%2C%20MAPREDUCE)%20AND%20status%20%3D%20Resolved')
 #print(html.text)
-f = open('ppp.txt', 'r')
+f = open('pppppp.txt', 'r')
 a=f.read()
 f.close()
 b=a.split(',')
@@ -72,7 +72,7 @@ s=set()
 for i in b:
     s.add(i)
 
-#p=open('ppp.txt','a')
+p=open('pppppp.txt','a')
 def getpage(u):
     cs = session.get(url=u, headers=headers)
     sp = BeautifulSoup(cs.text, 'html.parser')
@@ -95,7 +95,7 @@ onepage = 'https://issues.apache.org/jira/browse/'
 #    getpage(onepage+num)
 
 pag='https://issues.apache.org/jira/secure/ViewProfile.jspa?name='
-pera=open('result111.txt','a')
+pera=open('result222.txt','a')
 def getOneperson(ur):
     cs = session.get(url=ur, headers=headers)
     sp = BeautifulSoup(cs.text, 'html.parser')

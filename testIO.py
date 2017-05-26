@@ -1,4 +1,4 @@
-f = open('ppp.txt', 'r')
+f = open('pppppp.txt', 'r')
 a=f.read()
 f.close()
 b=a.split(',')
