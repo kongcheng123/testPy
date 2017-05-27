@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import os, time
 import re
 
-#模拟登陆知乎
+#模拟登陆
 # import http.cookiejar as cookielib
 
 # 构造 Request headers
@@ -64,7 +64,7 @@ def getOnepage(url):
 
 #html = requests.get('https://issues.apache.org/jira/browse/YARN-6627?jql=project%20in%20(YARN%2C%20HDFS%2C%20HADOOP%2C%20MAPREDUCE)%20AND%20status%20%3D%20Resolved')
 #print(html.text)
-f = open('pppppp.txt', 'r')
+f = open('key.txt', 'r')
 a=f.read()
 f.close()
 b=a.split(',')
@@ -72,7 +72,7 @@ s=set()
 for i in b:
     s.add(i)
 
-p=open('pppppp.txt','a')
+p=open('user.txt','a')
 def getpage(u):
     cs = session.get(url=u, headers=headers)
     sp = BeautifulSoup(cs.text, 'html.parser')
@@ -91,11 +91,19 @@ def getpage(u):
 
 onepage = 'https://issues.apache.org/jira/browse/'
 #getpage(onepage+'YARN-6618')
-#for num in s:
-#    getpage(onepage+num)
+for num in s:
+    getpage(onepage+num)
 
+
+f = open('user.txt', 'r')
+a=f.read()
+f.close()
+b=a.split(',')
+se=set()
+for i in b:
+    se.add(i)
 pag='https://issues.apache.org/jira/secure/ViewProfile.jspa?name='
-pera=open('result222.txt','a')
+pera=open('result.txt','a')
 def getOneperson(ur):
     cs = session.get(url=ur, headers=headers)
     sp = BeautifulSoup(cs.text, 'html.parser')
@@ -112,5 +120,5 @@ def getOneperson(ur):
         print(dic)
         pera.write(str(dic)+',')
 
-for nn in s:
+for nn in se:
     getOneperson(pag+nn)
